@@ -1,33 +1,47 @@
-
 body {
   font-family: 'Inter', sans-serif;
   background: #f3f4f6;
   color: #333;
+  padding-top: 70px; /* espacio para navbar fijo */
 }
 
+/* Navbar y footer mismo color */
+.bg-custom {
+  background-color: #0f172a !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Zona invisible arriba para detectar hover en desktop */
+#hoverZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  z-index: 1041;
+}
+
+/* Navbar fixed-top con animaciones para ocultar/mostrar */
+#navReveal.nav-hidden {
+  transform: translateY(-100%);
+}
+
+#navReveal.nav-visible {
+  transform: translateY(0%);
+}
+
+/* Header original estilizado */
 header {
-  background: linear-gradient(to right, #4f46e5, #6366f1);
+  background: linear-gradient(to right, #4338ca, #6366f1);
   color: white;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-
-#search {
-  border-radius: 50px;
-  border: none;
-  padding-left: 3rem;
-  background: #fff url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 1rem center;
-  background-size: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-#search:focus {
-  outline: none;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
-}
-
-
+/* Cards */
 .card {
   border: none;
   border-radius: 20px;
@@ -52,18 +66,18 @@ header {
   color: #6b7280;
 }
 
-
 .card-footer {
   background-color: #f9fafb;
   border-top: none;
   padding: 0.75rem 1rem;
 }
 
-
 .card-footer strong {
   font-size: 1.1rem;
+  color: #dc2626;
 }
 
+/* Botones outline */
 .btn-outline-primary {
   border-color: #6366f1;
   color: #6366f1;
@@ -76,13 +90,207 @@ header {
   color: #fff;
 }
 
-
-.modal-header {
-  background-color: #4f46e5;
+/* Banner oferta */
+#bannerOferta {
+  background: linear-gradient(90deg, #f97316, #ea580c);
   color: white;
-  border-bottom: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.6);
 }
 
-.modal-footer {
-  background-color: #f3f4f6;
+/* Sección contacto */
+#contacto {
+  background-color: #e0e7ff;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
+  text-align: center;
+}
+
+#contacto h2 {
+  margin-bottom: 1.5rem;
+  color: #3730a3;
+}
+
+#contacto .btn-contact {
+  margin: 0 0.5rem;
+  min-width: 140px;
+}
+
+/* Footer */
+footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 1rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+/* Color personalizado para nav y footer */
+.bg-custom {
+  background-color: #0f172a !important;
+}
+
+/* Navbar links y hover */
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #facc15 !important; /* amarillo suave */
+}
+
+/* Botón del nav */
+.navbar .btn-outline-light:hover {
+  background-color: #facc15;
+  color: #0f172a;
+  border-color: #facc15;
+}/* Navbar */
+.navbar {
+  background-color: #0d6efd; /* color igual al footer */
+  transition: top 0.3s ease;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Cuando se oculta el navbar (sale hacia arriba) */
+#navReveal.nav-hidden {
+  top: -70px; /* ajusta si cambias altura navbar */
+  position: fixed;
+}
+
+/* Cuando está visible */
+#navReveal.nav-visible {
+  top: 0;
+  position: fixed;
+}
+
+/* Zona invisible en el top para mostrar navbar al hacer hover */
+#hoverZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 1040;
+  background: transparent;
+}
+.bg-footer-color {
+  background-color: #0d6efd !important; /* Mismo color footer */
+}
+
+#navbar {
+  transition: top 0.3s ease;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  position: fixed;
+}
+
+/* Ocultar navbar hacia arriba */
+#navbar.nav-hidden {
+  top: -70px; /* Ajusta según la altura de tu navbar */
+  position: fixed;
+}
+
+/* Mostrar navbar */
+#navbar.nav-visible {
+  top: 0;
+  position: fixed;
+}
+
+/* Zona invisible para detectar hover */
+#hoverZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 1040;
+  background: transparent;
+}
+/* Color personalizado para nav y footer */
+.bg-custom {
+  background-color: #0f172a !important;
+}
+
+/* Navbar links y hover */
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #facc15 !important; /* amarillo suave */
+}
+
+/* Botón del nav */
+.navbar .btn-outline-light:hover {
+  background-color: #facc15;
+  color: #0f172a;
+  border-color: #facc15;
+}
+#hoverZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 1040;
+  background: transparent;
+  pointer-events: auto; /* para detectar el hover */
+}
+
+/* Para que el body no tenga padding o margin que lo cause */
+body {
+  margin: 0;
+  padding: 0;
+}
+.discount-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discount-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(255, 99, 71, 0.3);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #ff4d4f; /* rojo brillante */
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #a0aec0; /* gris suave */
+  margin-right: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.discounted-price {
+  color: #ff4d4f; /* mismo rojo brillante */
+  font-weight: 700;
+  font-size: 1.3rem;
 }
