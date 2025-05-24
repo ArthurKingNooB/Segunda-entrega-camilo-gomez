@@ -57,7 +57,34 @@
   <section id="bannerOferta" class="container">
     ¡Oferta especial! Aprovechá hasta 30% de descuento en productos seleccionados.
   </section>
-
+<!-- Agregado justo encima del <main id="productos"> -->
+<section class="container mb-4">
+  <div class="row g-2">
+    <div class="col-md-4">
+      <input type="text" id="searchInput" class="form-control" placeholder="Buscar productos..." />
+    </div>
+    <div class="col-md-4">
+      <select id="filterType" class="form-select">
+        <option value="">Todos los tipos</option>
+        <option value="Pan">Pan</option>
+        <option value="Mazapan">Mazapan</option>
+        <option value="Atun">Atun</option>
+        <option value="Limpiapisos">Limpiapisos</option>
+        <option value="Lavaloza">Lavaloza</option>
+        <option value="Leche">Leche</option>
+        <option value="Galletas">Galletas</option>
+        <option value="Jugo">Jugo</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select id="filterOffer" class="form-select">
+        <option value="">Todas</option>
+        <option value="oferta">Solo en oferta</option>
+        <option value="normal">Sin oferta</option>
+      </select>
+    </div>
+  </div>
+</section>
   <!-- Productos -->
   <main id="productos" class="container my-5">
     <div class="row g-4">
